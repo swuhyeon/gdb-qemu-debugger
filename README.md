@@ -2,7 +2,7 @@
 
 > QEMU based x86_64 Virtual Hardware Debugger (QVHD)
 
-QEMU의 gdbstub을 활용해 **레지스터·페이지 테이블·가상 메모리 상태**를 한 화면에서 추적하는 TUI 기반 x86_64 가상 하드웨어 디버거입니다.
+QEMU의 gdbstub을 활용해 **레지스터·페이지 테이블·메모리 상태**를 한 화면에서 추적하는 TUI 기반 x86_64 가상 하드웨어 디버거입니다.
 
 ---
 
@@ -10,7 +10,7 @@ QEMU의 gdbstub을 활용해 **레지스터·페이지 테이블·가상 메모�
 
 ## 1. Features
 ### 1) Register
-- QEMU 게스트의 GPR/segment 레지스터를 표시합니다.
+- QEMU 게스트의 레지스터를 표시합니다.
 - 이전 스텝과 값이 달라진 레지스터는 **색상 강조(노랑)** 로 표시됩니다.
 - 표시 순서는 `REG_ORDER` 에 정의되어 있으며, 출력 항목은 다음과 같습니다.
 
@@ -71,7 +71,7 @@ $HOME/
 qvhd/
   gdb_mi_client.py  # GDB/MI + QEMU monitor wrapper
   session.py        # DebugSession
-  tui.py            # curses-based TUI frontend
+  ui.py             # curses-based TUI frontend
 
 scripts/
   run_qemu.sh       # start QEMU guest with gdb stub (-s -S)
