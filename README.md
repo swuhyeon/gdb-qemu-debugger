@@ -27,11 +27,11 @@ QEMU의 gdbstub을 활용해 **레지스터·페이지 테이블·가상 메모�
 ### 2) Page Info
 - 현재 선택된 VA에 대해 **페이지 테이블 워크**를 수행하며, 출력 항목은 다음과 같습니다.
   - `va`
-  - `perm` (`R-X (kernel)`)
+  - `perm`
   - `present`, `page_size`, `level`
   - `cr3`
   - `pml4_index`, `pdpt_index`, `pd_index`, `pt_index`, `offset`
-  - `pml4_entry`, `pdpt_entry`, `pd_entry`
+  - `pml4_entry`, `pdpt_entry`, `pd_entry`, `pt_entry`
   - `flags`
 
 - Page Info 모드는 두 가지가 있습니다:
